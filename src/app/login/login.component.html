@@ -1,0 +1,14 @@
+<div class='container mt-5 text-center' style="max-width: 400px">
+    <form action="" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Korisničko ime" required="required" [(ngModel)]='username' name="username">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Lozinka" required="required" [(ngModel)]='password' name="password">
+        </div>
+        <input type="submit" class="btn btn-primary" value="PRIJAVI SE" (click)='login()'>
+    </form>
+</div>
+<div class="text-center text-danger mt-2">
+    <p>{{ msg }}</p>
+</div>

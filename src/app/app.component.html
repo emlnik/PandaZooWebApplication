@@ -1,0 +1,50 @@
+<div class="header-img">
+  <img src="assets/pandaheader2.png" style="width: 100%" (click)="home()">
+</div>
+
+<nav class="navbar navbar-expand-xl navbar-light" style="background-color: #EFEFEF;" *ngIf="loggedUser != null">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a routerLink='/profile' class="ml-3 navbar-brand">
+      Moj profil
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+    <ul class="nav navbar-nav ml-auto" *ngIf="loggedUser.type=='zaposleni'">
+      <li class="nav-item">
+        <a routerLink='/addAnimal' class="btn btn-light ml-auto mt-1 mb-1">DODAJ ZIVOTINJU</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='/zahtevi' class="btn btn-light ml-auto mt-1 mb-1">ZAHTEVI</a>
+      </li>
+      <button (click)="logout()" class="btn btn-light ml-auto mt-1 mb-1">
+        ODJAVI SE
+      </button>       
+    </ul> 
+
+    <ul class="nav navbar-nav ml-auto" *ngIf="loggedUser.type=='posetilac'">
+      <li class="nav-item">
+        <a routerLink='/obavestenja' class="btn btn-light ml-auto mt-1 mb-1">OBAVESTENJA</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='/kupovina' class="btn btn-light ml-auto mt-1 mb-1">PAKETI I KUPOVINA ULAZNICA</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='/kontakt' class="btn btn-light ml-auto mt-1 mb-1">KONTAKT</a>
+      </li>
+      <button (click)="logout()" class="btn btn-light ml-auto mt-1 mb-1">
+        ODJAVI SE
+      </button>    
+    </ul> 
+
+  </div>
+
+</nav>
+
+<!-- Content -->
+<router-outlet></router-outlet>

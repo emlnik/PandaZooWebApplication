@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center mt-3">
+  
+    <div class="container-fluid" style="max-width: 400px;">
+        <hr>
+        <div style="padding: 0px 30px; font-size: large;">
+           Pregled pristiglih zahteva
+        </div>
+        <hr>
+        <div style="padding: 0px 30px; font-size: large; line-height: 40px;" *ngIf="zahteviPending.length != 0" >
+            <div style="padding: 0px 30px; font-size: large;"  *ngFor="let z of zahteviPending" >
+                <hr>
+                Kupac: <b>{{ z.kupac }}</b>
+                <br>
+                Broj: <b>{{ z.broj }}</b>
+                <br>
+                Cena: <b>{{ z.cena }}</b>
+                <br>
+                Tip: <b>{{ z.tip }}</b>
+                <br>
+                <input type="submit" class="btn btn-primary" value="ODOBRI" (click)='odobri(z)'*ngIf="z.status=='pending' ">
+                <br>
+                <input type="submit" class="btn btn-primary" value="ODBIJ" (click)='odbij(z)' *ngIf="z.status=='pending' ">
+           <hr>
+            </div>
+            
+         
+        </div>
+        
+        <br>
+      
+    </div>
+</div>
+

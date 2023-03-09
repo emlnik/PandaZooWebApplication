@@ -1,0 +1,32 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="offset-sm-2 col-sm-2 text-center">
+            <img class="image-container-center img-responsive" src="../../assets/{{ desavanje.image }}">
+            <br/>
+           
+        </div>        
+        <div class="col-sm-6 animal-details">
+            <span class="desavanja-name">{{ desavanje.title }}</span>
+            <div class="my-3">Opis: <span class="details">{{ desavanje.description }}</span></div>
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+<div class="container-fluid comment-section pt-5 pb-5">
+    <div class="row">
+        <div class="offset-sm-2 col-sm-4">
+            <span style="font-size: large;"></span>
+            <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fas fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio" (click)="setRating(1)">
+            </div>
+            <span style="font-size: large;">{{ desavanje.likes}}</span>
+        </div>
+    </div>
+
+</div>

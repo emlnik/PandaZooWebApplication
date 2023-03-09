@@ -1,0 +1,40 @@
+<div class="slider-container">
+    <span (click)="prev()" class="control-prev-btn">
+        <i class="fas fa-chevron-left"></i>
+    </span>
+
+    <div id="slider-container" class="slider"> 
+        <div *ngFor="let a of allAnimals">
+            <div class="slide" (click)="animalDetails(a)">
+                <img src="../../assets/{{ a.image }}">
+                <div class="name">{{ a.name }}</div>
+               
+            </div>
+        </div>        
+    </div>
+
+    <span (click)="next()" class="control-next-btn">
+        <i class="fas fa-chevron-right"></i>
+    </span>
+</div>
+<div class="desavanja-container">
+    <h2 class="text-center pt-3"><i>DESAVANJA</i></h2>
+    <div class="slider-container">
+        <span (click)="prevDesavanje()" class="control-prev-btn">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+    
+        <div id="desavanja-slider-container" class="slider"> 
+            <div *ngFor="let d of desavanja">
+                <div class="slide" (click)="desavanjaDetails(d)">
+                    <img src="../../assets/{{ d.image }}">
+                    <div class="name">{{ d.title }}</div>
+                </div>
+            </div>        
+        </div>
+    
+        <span (click)="nextDesavanje()" class="control-next-btn">
+            <i class="fas fa-chevron-right"></i>
+        </span>
+    </div>
+</div>

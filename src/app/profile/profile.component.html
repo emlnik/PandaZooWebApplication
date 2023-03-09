@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center mt-3">
+    <div class="container-fluid" style="max-width: 400px;">
+        <hr>
+        <div style="padding: 0px 30px; font-size: large;">
+            KORISNIČKO IME: <b>{{ user.username }}</b>
+        </div>
+        <hr>
+        <div style="padding: 0px 30px; font-size: large; line-height: 40px;">
+            IME: <b>{{ user.firstName }}</b>
+            <br>
+            PREZIME: <b>{{ user.lastName }}</b>
+            <br>
+            ADRESA: <b>{{ user.address }}</b>
+            <br>
+            KONTAKT TELEFON: <b>{{ user.phone }}</b>
+        </div>
+        
+        <br>
+        <div class="text-center">
+            <button class="btn btn-primary m-2" (click)="changeData()">IZMENI PODATKE</button>
+            <br>
+            <button class="btn btn-primary m-2" (click)="changePassword()">IZMENI LOZINKU</button>
+        </div>
+    </div>
+</div>

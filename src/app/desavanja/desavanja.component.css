@@ -1,0 +1,60 @@
+img {
+    width: 12vw;
+}
+@media screen and (max-width: 900px) { 
+	img  {
+		width: 100px;
+    }
+}
+.desavanja-name {
+    font-size: xx-large;
+    color: black;
+}
+.desavanja-detalis {
+    color: gray;    
+    font-size: large;
+}
+.desavanja-detalis .details {
+    color: black;
+}
+
+
+.glyphicon {
+	color: #333;
+	cursor: pointer;
+}
+
+.highlighted {
+	color: deeppink;
+}
+
+.rating-group {
+    display: inline-flex;
+}
+.rating__icon {
+    pointer-events: none;
+}
+.rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+.rating__input--none {
+    display: none
+}
+.rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+.rating__icon--star {
+    color: red;
+}
+.rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #0004692a;
+}
+.rating-group:hover .rating__label .rating__icon--star {
+    color: red;
+}
+.rating__input:hover ~ .rating__label .rating__icon--star {
+    color: #0004692a;
+}

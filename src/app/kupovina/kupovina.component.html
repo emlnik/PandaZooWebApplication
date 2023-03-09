@@ -1,0 +1,47 @@
+<h3 class="text-center m-3" style="font-weight: 400;">Kupovina ulaznica</h3>
+<div class='container mt-4 text-center' style="max-width: 400px">
+    <form action="" method="post">
+        <div class="form-group">
+            <form action="" method="post">
+                <div class="form-group">
+                    <h5>Standard ulaznice</h5>
+                    <b>Cena za jednu osobu za jedan dan: 600 RSD</b>
+                
+                    <input type="number"  placeholder="Broj ulaznica" [(ngModel)]='brojUlaznica' name="brojUlaznica">
+                    <input type="submit" class="btn btn-primary" value="KUPI" (click)="kupiStandard(brojUlaznica)">
+                    <br>
+                    <br>
+                    
+                    <h5>Porodicni paket</h5>
+                    <b>Vikendom su karte za decu gratis</b>
+                
+                    <input type="number"  placeholder="Broj ulaznica" [(ngModel)]='brojUlaznica1' name="brojUlaznica1">
+                    <input type="text"  placeholder="Broj dece" [(ngModel)]='brojDece' name="brojDece">
+                    <input type="submit" class="btn btn-primary" value="KUPI" (click)="kupiPorodicnu(brojUlaznica1,brojDece)">
+                    <br>
+                    <br>
+                    
+                    <h5>Monkey Valley paket</h5>
+                    <b>2+1 ulaznica gratis za desavanje Monkey Valley</b>
+                
+                  
+                    <input type="submit" class="btn btn-primary" value="KUPI" (click)="kupiMV()">
+                    <br>
+                    <br>
+                    
+                    <h5>Skolski paket</h5>
+                    <b>50% popusta na ulaznice za decu za skolske ture </b>
+                
+                    <input type="number"  placeholder="Broj ulaznica" [(ngModel)]='brojUlaznica2' name="brojUlaznica2">
+                    <input type="text"  placeholder="Broj dece" [(ngModel)]='brojDece1' name="brojDece1">
+                    <input type="submit" class="btn btn-primary" value="KUPI" (click)="kupi(brojUlaznica2,brojDece1)">
+                
+                </div>
+              
+              
+            </form>
+        </div>
+      
+     <!-- <input type="submit" class="btn btn-primary" value="PRETRAŽI" (click)='search()'> -->
+    </form>
+</div>

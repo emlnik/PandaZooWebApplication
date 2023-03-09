@@ -1,0 +1,23 @@
+<h5 class="text-center m-3" style="font-weight: 400;">Dodavanje zivotinje</h5>
+<div class='container mt-4 text-center' style="max-width: 400px">
+    <form action="" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Naziv" [(ngModel)]='name' name="name">
+        </div>
+      
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Slika" [(ngModel)]='image' name="image">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Opis" [(ngModel)]='description' name="description">
+        </div>
+       
+        <input type="submit" class="btn btn-primary" value="DODAJ" (click)='add()'>
+    </form>
+</div>
+<div class="text-center text-danger mt-2">
+    <p>{{ msg }}</p>
+</div>
+<div class="text-center text-success mt-2">
+    <p>{{ successMsg }}</p>
+</div>

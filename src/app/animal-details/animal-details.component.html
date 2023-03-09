@@ -1,0 +1,43 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="offset-sm-2 col-sm-2 text-center">
+            <img class="image-container-center img-responsive" src="../../assets/{{ animal.image }}">
+            <br/>
+          
+        </div>        
+        <div class="col-sm-6 book-details">
+            <span class="book-title">{{ animal.name }}</span>
+            <div class="my-3">Opis: <span class="details">{{ animal.description }}</span></div>
+        </div>
+    </div>
+    
+
+</div>
+
+<!--Comment section-->
+<div class="container-fluid comment-section pt-5 pb-5">
+
+    <div class="row">
+        <div class="offset-sm-2 col-sm-4">
+            <div class="heading-sm my-1" style="font-size: large;">Komentari:</div>
+
+            <div class="comment" *ngFor="let comment of animal.comments">
+                <img src="../../assets/user.jpg" class="avatar">
+                <span class="name">{{ comment.name }}</span>
+                <div class="comment-content">{{ comment.comment }}</div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4 ml-5" *ngIf="user.type=='posetilac'">
+            <div class="heading-sm mt-3 mb-3" style="font-size: large;">Postavi komentar:</div>
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Komentar..." rows="5" name="comment" [(ngModel)]="comment"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary ml-4" value="POSTAVI" (click)='setComment()'>
+            </form>
+        </div>
+
+    </div>
+</div>

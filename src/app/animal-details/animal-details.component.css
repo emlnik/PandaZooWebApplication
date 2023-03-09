@@ -1,0 +1,76 @@
+/* Animal */
+img {
+    width: 12vw;
+}
+@media screen and (max-width: 900px) { 
+	img  {
+		width: 100px;
+    }
+}
+.animal-name {
+    font-size: xx-large;
+    color: black;
+}
+.animal-detalis {
+    color: gray;    
+    font-size: large;
+}
+.animal-detalis .details {
+    color: black;
+}
+
+
+
+/* Comment */
+.comment-section .heading-sm {
+    border-bottom: .5px solid gray;
+    padding: 1em 0em;
+}
+.comment {
+    border-left: 3px solid rgb(132, 164, 201);
+    padding: 0 2em;
+    margin: 2em 0;
+}
+.comment .avatar {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.comment .name {
+    font-weight: 700;
+    color: rgb(132, 164, 201);
+    margin-right: 10px;
+}
+
+/* Stars */
+.rating-group {
+    display: inline-flex;
+}
+.rating__icon {
+    pointer-events: none;
+}
+.rating__input {
+    position: absolute !important;
+    left: -9999px !important;
+}
+.rating__input--none {
+    display: none
+}
+.rating__label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+}
+.rating__icon--star {
+    color: #000369;
+}
+.rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #0004692a;
+}
+.rating-group:hover .rating__label .rating__icon--star {
+    color: #000369;
+}
+.rating__input:hover ~ .rating__label .rating__icon--star {
+    color: #0004692a;
+}

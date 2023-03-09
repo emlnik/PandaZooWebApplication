@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center mt-3">
+  
+    <div class="container-fluid" style="max-width: 400px;">
+        <hr>
+        <div style="padding: 0px 30px; font-size: large;">
+       <h3>  <b>  Vasa obavestenja </b></h3>
+        </div>
+        <hr>
+        <div style="padding: 0px 30px; font-size: large; line-height: 40px;" *ngIf="zahteviMoji.length != 0" >
+            <div style="padding: 0px 30px; font-size: large;"  *ngFor="let z of zahteviMoji">
+                <hr>
+                <div *ngIf="z.status=='approved'">
+                    <b>Vas zahtev za kupovinu {{z.broj}} ulaznice/a tipa {{z.tip}} je odobren</b>
+                </div>
+                <div *ngIf="z.status=='rejected'">
+                    <b>Vas zahtev za kupovinu {{z.broj}} ulaznice/a tipa {{z.tip}} je odbijen</b>
+                </div>
+          
+           <hr>
+            </div>
+            
+         
+        </div>
+        
+        <br>
+      
+    </div>
+</div>
